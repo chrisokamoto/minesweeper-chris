@@ -1,0 +1,12 @@
+<div id="game_over_warning" class="padding-top-10"></div>
+<table id="minesweeper">
+<% $board.each do |key, row| %>
+  <tr />
+  <% row.each_with_index do |tile, key_row| %>
+    <td />
+    <%= hidden_field_tag :row, key, class: "row" %>
+    <%= hidden_field_tag :col, key_row, class: "col" %>
+    <span class="tile_info" id="span-<%= key.to_s + "-" + key_row.to_s %>"></span>
+  <% end %>
+<% end %>
+</table>

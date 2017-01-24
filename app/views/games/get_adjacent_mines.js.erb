@@ -1,0 +1,10 @@
+<% if @tile_info == -1 %>
+  $('#game_over_warning').html("<div class='col-xs-12 alert alert alert-info'><%= I18n.t('game_over')%></div>");
+  $("#minesweeper td").click(function(e) {
+    alert("Refresh the page to restart the game");
+    return false;
+  });
+<% else %>
+  $("#span-<%= @row.to_s + "-" + @col.to_s %>").show();
+  $("#span-<%= @row.to_s + "-" + @col.to_s %>").html("<%= @tile_info %>");
+<% end %>
