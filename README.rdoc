@@ -5,5 +5,3 @@ Decisions taken:
 * The tiles are opened one by one, even if it doesn't have adjacent mines.
 
 * When a mine is found, an alert message pops up on the screen.
-
-* Time spent: almost 5 hours in total
